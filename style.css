@@ -1,0 +1,226 @@
+/*
+Theme Name: Lotus Publishing
+Theme URI: http://www.lotuspublishing.co.uk/
+Author: Lotus Publishing
+Author URI: http://www.lotuspublishing.co.uk/
+Description: Theme developed for the launch of Lotus Publishing website in 2016.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: orange, grey, black, two-columns, left-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Text Domain: lotuspublishing
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/**
+ * 1.0 - Reset
+ *
+ * Resetting and rebuilding styles have been helped along thanks to the fine
+ * work of Eric Meyer, Nicolas Gallagher, Jonathan Neal, and Blueprint.
+ */
+
+body {
+  background-color: #ffffff;
+  font-family: 'PT Sans', arial, sans-serif;
+  font-size: 15px;
+  color: #444;
+}
+a {
+  color: #999;
+}
+a:hover {
+  color: #f16f24;
+}
+.site-wrapper {
+  background: #ffffff;
+  padding-bottom: 20px;
+}
+.site-wrapper-inner {
+  background-color: #ffffff;
+}
+#main {
+  position: relative;
+  background: #ffffff;
+  padding: 0 0 20px;
+  z-index: 10;
+}
+.container {
+  max-width: 960px;
+  width: 100%;
+}
+#site-logo {
+  float: left;
+  width: 20%;
+  /*margin-left: 25px;*/
+  display: inline-block;
+  text-align: center;
+}
+#nav-left {
+  float: left;
+  margin-top: 73px;
+  width: 40%;
+}
+#nav-right {
+  float: right;
+  margin-top: 73px;
+  width: 40%;
+}
+.menu-list {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  display: table;
+}
+.menu-list > li {
+  float: left;
+  width: 33.33%;
+  position: relative;
+}
+.menu-list > li > a {
+  display: block;
+  padding: 10px 16px;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  position: relative;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center;
+}
+@media (min-width:768px) {
+  .sub-menu {
+    display: none;
+    position: absolute;
+    background: #f5f5f5;
+    opacity: 0.8;
+    padding: 0;
+    width: 190px;
+    left: 46px;
+    z-index: 9999;
+  }
+
+  li:hover .sub-menu {
+    display: block;
+  }
+
+}
+.sub-menu li {
+  list-style: none;
+  font-weight: normal;
+  text-align: left;
+  /*text-transform: capitalize;*/
+}
+
+.sub-menu li:last-child {
+  margin-bottom: 10px;
+}
+
+.sub-menu a  {
+  color: #999;
+  text-decoration: none;
+  display: block;
+  font-size: 12px;
+  padding: 5px 10px;
+  letter-spacing: 1px;
+  line-height: 18px;
+}
+
+.sub-menu a:hover  {
+  color: #f16f24;
+}
+.sub-menu li.current-menu-item > a {
+  color: #f16f24;
+}
+#footer {
+  position: relative;
+  background-color: #182227;
+  padding: 18px 0;
+  font-size: 12px;
+  bottom: 0;
+  z-index: 0;
+  width: 100%;
+  color: #999999;
+}
+#footer h3 {
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+#footer a {
+  color: #fff;
+}
+#footer a:hover {
+  color: #feb900;
+}
+#footer p {
+  margin: 0;
+  padding: 0;
+}
+#footer .social-media {
+  margin-top: 10px;
+}
+#footer .tag-line {
+  margin-top: 10px;
+}
+.footer-widgets {
+  position: relative;
+  background: #3D4D54;
+  background-size: 50px 50px;
+  padding: 30px 0 30px 0;
+}
+.footer-widgets ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-copy {
+  position: relative;
+  background-color: #182227;
+  padding: 18px 0;
+  font-size: 11px;
+}
+
+.list-contact {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.list-contact > li {
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+.list-contact > li > .icon {
+  float: left;
+  width: 24px;
+  color: #aaa;
+}
+.list-contact > li > .text {
+  padding: 0;
+  color: #fff;
+  margin-left: 26px;
+}
+.widget {
+
+}
+.widget h3 {
+  background: #f16f24;
+  text-align: center;
+  padding: 10px;
+  margin: 0 0 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
