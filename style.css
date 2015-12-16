@@ -80,7 +80,7 @@ a:hover {
   width: 33.33%;
   position: relative;
   list-style: none;
-  border-bottom: 1px solid #f16f24;
+  /*border-bottom: 1px solid #f16f24;*/
 }
 .menu-list > li > a {
   display: block;
