@@ -6,8 +6,6 @@
 <meta charset="utf-8" />
 <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' /><![endif]-->
 
-<meta name="description" content="Building beautiful marketing sites is easier than ever. Over 15 new CSS and JS components adapt to any brand or style." />
-
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <!-- title tag-->
@@ -55,7 +53,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-  
+
   <div class="site-wrapper">
 
       <div class="site-wrapper-inner">
