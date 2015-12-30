@@ -77,4 +77,6 @@
   add_action( 'woocommerce_product_options_general_product_data', 'woo_add_custom_general_fields' );
   add_action( 'woocommerce_process_product_meta', 'woo_add_custom_general_fields_save' );
 
+  add_action( 'woocommerce_shop_loop_book_author_name', 'woocommerce_template_loop_book_author_name', 5 );
+
 ?>

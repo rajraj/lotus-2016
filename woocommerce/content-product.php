@@ -63,6 +63,7 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
 			 * @hooked woocommerce_template_loop_product_title - 10
 			 */
 			do_action( 'woocommerce_shop_loop_item_title' );
+			do_action( 'woocommerce_shop_loop_book_author_name' );
 
 			/**
 			 * woocommerce_after_shop_loop_item_title hook

@@ -51,6 +51,16 @@
     }
   }
 
+  if (  ! function_exists( 'woocommerce_template_loop_book_author_name' ) ) {
+
+  	/**
+  	 * Show the product title in the product loop. By default this is an H3
+  	 */
+  	function woocommerce_template_loop_book_author_name() {
+  		wc_get_template( 'loop/author-name.php' );
+  	}
+  }
+
   // Display Fields
   if ( ! function_exists( 'woo_add_custom_general_fields' ) ) {
 

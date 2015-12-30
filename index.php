@@ -1,49 +1,47 @@
 <?php get_header(); ?>
   <section id="main">
-    
-  <?php if ( have_posts() ) : ?>
 
-    <?php if ( is_home() && ! is_front_page() ) : ?>
-      <header>
-        <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-      </header>
-    <?php endif; ?>
+    <div class="row">
 
-    <?php
-    // Start the loop.
-    while ( have_posts() ) : the_post();
+      <div class="col-md-9">
 
-      the_content();
+        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-    // End the loop.
-    endwhile;
+          <div class="row">
 
-  // If no content, include the "No posts found" template.
-  else :
-    get_template_part( 'content', 'none' );
+            <div class="col-md-4">
+              <img src="https://placeholdit.imgix.net/~text?txtsize=33&w=300&h=300" alt="x" class="img-responsive" />
+            </div>
 
-  endif;
-  ?>
+            <div class="col-md-8">
 
-  <hr>
-  <div id="book-search"></div>
+              <h2 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+              <p class="post-details">
+                <?php echo the_time('F jS, Y');?><br>
+                <?php the_category( ', ' ); ?>
+              </p>
+              <div class="content">
+                <?php the_excerpt(); ?>
+                <a href="<?php the_permalink(); ?>" class="w8-button grey text-center wide-30">Read More</a>
+              </div>
 
-  <div class="row">
+            </div>
 
-    <div class="col-md-4">
-      <?php if ( dynamic_sidebar( 'home-page-left-pane' ) ); ?>
+          </div>
+
+          <hr>
+
+        <?php endwhile; endif; ?>
+
+      </div>
+
+      <div class="col-md-3">
+
+        <?php if ( dynamic_sidebar( 'blog-sidebar' ) ); ?>
+
+      </div>
     </div>
 
-    <div class="col-md-4">
-      <?php if ( dynamic_sidebar( 'home-page-middle-pane' ) ); ?>
-    </div>
-
-    <div class="col-md-4">
-      <?php if ( dynamic_sidebar( 'home-page-right-pane' ) ); ?>
-    </div>
-
-  </div>
-
-</section>
+  </section>
 
 <?php get_footer(); ?>

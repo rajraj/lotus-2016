@@ -18,7 +18,7 @@ global $product;
 <table class="table book-attributes">
 
 	<tr>
-		<td class="column-one"><strong><?php echo $product->author_name; ?></strong></td>
+		<td class="column-one"><strong></strong></td>
 		<td class="column-two">
 			<?php if ( $product->enable_dimensions_display() ) : ?>
 				<span>Size:</span> <?php echo $product->get_dimensions(); ?>

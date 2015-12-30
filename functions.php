@@ -15,6 +15,8 @@
     exit; // Exit if accessed directly
   }
 
+  // define( 'WP_MEMORY_LIMIT', '64M' );
+
   require_once('includes/lotus-theme-functions.php');
   require_once('includes/lotus-theme-widgets.php');
   require_once('includes/wc-custom-functions.php');

@@ -15,4 +15,6 @@
   create_widget('Home Page Left', 'home-page-left-pane', 'Display content for home page left pane.');
   create_widget('Home Page Middle', 'home-page-middle-pane', 'Display content for home page middle pane.');
   create_widget('Home Page Right', 'home-page-right-pane', 'Display content for home page right pane.');
+
+  create_widget('Blog Sidebar', 'blog-sidebar', 'Display categories and date of blog posts.');
 ?>
