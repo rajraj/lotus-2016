@@ -79,4 +79,6 @@
 
   add_action( 'woocommerce_shop_loop_book_author_name', 'woocommerce_template_loop_book_author_name', 5 );
 
+  add_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
+
 ?>

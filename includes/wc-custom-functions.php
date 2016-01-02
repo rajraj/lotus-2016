@@ -165,4 +165,56 @@
     }
   }
 
+  if ( ! function_exists( 'woocommerce_default_product_tabs' ) ) {
+
+  	/**
+  	 * Add default product tabs to product pages.
+  	 *
+  	 * @param array $tabs
+  	 * @return array
+  	 */
+  	function woocommerce_default_product_tabs( $tabs = array() ) {
+  		global $product, $post;
+
+  		// Description tab - shows product content
+  		if ( $post->post_content ) {
+  			$tabs['description'] = array(
+  				'title'    => __( 'Synopsis', 'woocommerce' ),
+  				'priority' => 10,
+  				'callback' => 'woocommerce_product_description_tab'
+  			);
+  		}
+
+  		// Additional information tab - shows attributes
+			$tabs['book_author'] = array(
+				'title'    => __( 'Author', 'woocommerce' ),
+				'priority' => 20,
+				'callback' => 'woocommerce_book_author_tab'
+			);
+
+  		// Reviews tab - shows comments
+  		if ( comments_open() ) {
+  			$tabs['reviews'] = array(
+  				'title'    => sprintf( __( 'Reviews (%d)', 'woocommerce' ), $product->get_review_count() ),
+  				'priority' => 30,
+  				'callback' => 'comments_template'
+  			);
+  		}
+
+  		return $tabs;
+  	}
+  }
+
+  if ( ! function_exists( 'woocommerce_book_author_tab' ) ) {
+
+  	/**
+  	 * Output the attributes tab content.
+  	 *
+  	 * @subpackage	Product/Tabs
+  	 */
+  	function woocommerce_book_author_tab() {
+      wc_get_template( 'single-product/author-bio.php' );
+  	}
+  }
+
 ?>
