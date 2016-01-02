@@ -18,7 +18,9 @@ global $product;
 <table class="table book-attributes">
 
 	<tr>
-		<td class="column-one"><strong></strong></td>
+		<td class="column-one">
+			<strong><?php echo book_author_names( $product->id ); ?></strong>
+		</td>
 		<td class="column-two">
 			<?php if ( $product->enable_dimensions_display() ) : ?>
 				<span>Size:</span> <?php echo $product->get_dimensions(); ?>
@@ -27,13 +29,22 @@ global $product;
 	</tr>
 
 	<tr>
-		<td class="column-one"></td>
-		<td class="column-two"><span>Pages:</span> <?php echo $product->num_pages; ?></td>
+		<td class="column-one">
+			<?php
+				$print_type = $product->print_type;
+				if ( $print_type == 'colour' ) {
+					echo 'Colour';
+				} else {
+					echo 'Black & White';
+				}
+			?>
+		</td>
+		<td class="column-two"><span>Pages:</span> <?php echo $product->number_of_pages; ?></td>
 	</tr>
 
 	<tr>
 		<td class="column-one"><span>ISBN:</span> <?php echo $product->isbn; ?></td>
-		<td class="column-two"><?php echo $product->format; ?></td>
+		<td class="column-two"><?php echo $product->book_format; ?></td>
 	</tr>
 
 </table>

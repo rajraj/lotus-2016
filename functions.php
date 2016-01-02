@@ -19,6 +19,7 @@
 
   require_once('includes/lotus-theme-functions.php');
   require_once('includes/lotus-theme-widgets.php');
+  require_once('includes/lotus-custom-taxonomy-functions.php');
   require_once('includes/wc-custom-functions.php');
   require_once('includes/wc-custom-hooks.php');
 

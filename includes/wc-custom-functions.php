@@ -88,16 +88,6 @@
 
         woocommerce_wp_text_input(
           array(
-            'id'    => '_author_name',
-            'label'    => __( 'Author', 'woocommerce' ),
-            'placeholder'    => 'Author name',
-            'desc_tip'    => true,
-            'description'    => __( 'Enter Author name here.', 'woocommerce' ),
-          )
-        );
-
-        woocommerce_wp_text_input(
-          array(
             'id'    => '_isbn',
             'label'    => __( 'ISBN', 'woocommerce' ),
             'placeholder'    => 'ISBN',
@@ -108,7 +98,7 @@
 
         woocommerce_wp_text_input(
           array(
-            'id'    => '_num_pages',
+            'id'    => '_number_of_pages',
             'label'    => __( 'Pages', 'woocommerce' ),
             'placeholder'    => 'No of pages',
             'desc_tip'    => true,
@@ -118,11 +108,24 @@
 
         woocommerce_wp_text_input(
           array(
-            'id'    => '_format',
+            'id'    => '_book_format',
             'label'    => __( 'Format', 'woocommerce' ),
             'placeholder'    => 'Format',
             'desc_tip'    => true,
             'description'    => __( 'Enter book format here.', 'woocommerce' ),
+          )
+        );
+
+        woocommerce_wp_select(
+          array(
+            'id'    => '_print_type',
+            'label'    => __( 'Print', 'woocommerce' ),
+            'desc_tip'    => true,
+            'description'    => __( 'Enter Print Type.', 'woocommerce' ),
+            'options'=> array(
+              'colour' => __( 'Colour', 'woocommerce' ),
+              'black' => __( 'Black & White', 'woocommerce' )
+            )
           )
         );
       echo '</div>';
@@ -144,21 +147,21 @@
     	if( !empty( $woocommerce_text_field_amazon_link ) )
     		update_post_meta( $post_id, '_amazon_link', esc_attr( $woocommerce_text_field_amazon_link ) );
 
-      $woocommerce_text_field_author_name = $_POST['_author_name'];
-    	if( !empty( $woocommerce_text_field_author_name ) )
-    		update_post_meta( $post_id, '_author_name', esc_attr( $woocommerce_text_field_author_name ) );
+      $woocommerce_select_field_print_type = $_POST['_print_type'];
+    	if( !empty( $woocommerce_select_field_print_type ) )
+    		update_post_meta( $post_id, '_print_type', esc_attr( $woocommerce_select_field_print_type ) );
 
       $woocommerce_text_field_isbn = $_POST['_isbn'];
       if( !empty( $woocommerce_text_field_isbn ) )
         update_post_meta( $post_id, '_isbn', esc_attr( $woocommerce_text_field_isbn ) );
 
-      $woocommerce_text_field_num_pages = $_POST['_num_pages'];
-      if( !empty( $woocommerce_text_field_num_pages ) )
-        update_post_meta( $post_id, '_num_pages', esc_attr( $woocommerce_text_field_num_pages ) );
+      $woocommerce_text_field_number_of_pages = $_POST['_number_of_pages'];
+      if( !empty( $woocommerce_text_field_number_of_pages ) )
+        update_post_meta( $post_id, '_number_of_pages', esc_attr( $woocommerce_text_field_number_of_pages ) );
 
-      $woocommerce_text_field_format = $_POST['_format'];
-      if( !empty( $woocommerce_text_field_format ) )
-        update_post_meta( $post_id, '_format', esc_attr( $woocommerce_text_field_format ) );
+      $woocommerce_text_field_book_format = $_POST['_book_format'];
+      if( !empty( $woocommerce_text_field_book_format ) )
+        update_post_meta( $post_id, '_book_format', esc_attr( $woocommerce_text_field_book_format ) );
     }
   }
 

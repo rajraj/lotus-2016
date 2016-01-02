@@ -325,7 +325,7 @@ a.w8-button { color: white;}
   border-bottom: 1px solid #f5f5f5;
 }
 .book-attributes td {
-  padding: 10px!important;
+  padding: 10px 0!important;
   border-top: 1px solid #f5f5f5!important;
 }
 .book-attributes td.column-one {
