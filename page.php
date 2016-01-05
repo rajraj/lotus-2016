@@ -26,7 +26,9 @@
   ?>
 
   <hr>
-  <div id="book-search"></div>
+  <div id="book-search">
+    <?php get_product_search_form(); ?>
+  </div>
 
   <div class="row footer-widgets">
 

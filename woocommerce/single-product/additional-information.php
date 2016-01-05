@@ -44,7 +44,18 @@ global $product;
 
 	<tr>
 		<td class="column-one"><span>ISBN:</span> <?php echo $product->isbn; ?></td>
-		<td class="column-two"><?php echo $product->book_format; ?></td>
+		<td class="column-two">
+			<?php
+				$print_type = $product->print_type;
+				if ( $print_type == 'ebook' ) {
+					echo 'eBook';
+				} elseif ( $print_type == 'hardcover' ) {
+					echo 'Hardcover';
+				} else {
+					echo 'Paperback';
+				}
+			?>
+		</td>
 	</tr>
 
 </table>

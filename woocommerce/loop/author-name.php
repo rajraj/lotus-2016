@@ -11,5 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
+global $product;
+
 ?>
-<strong></strong>
+<span class="author-name"><?php echo book_author_names( $product->id ); ?></span>

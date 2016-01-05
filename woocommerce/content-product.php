@@ -34,7 +34,8 @@ if ( ! $product || ! $product->is_visible() ) {
 $woocommerce_loop['loop']++;
 
 // Extra post classes
-$classes = array();
+$classes = array("col-md-3 col-sm-6 col-xs-12");
+
 if ( 0 == ( $woocommerce_loop['loop'] - 1 ) % $woocommerce_loop['columns'] || 1 == $woocommerce_loop['columns'] ) {
 	$classes[] = 'first';
 }
@@ -42,11 +43,11 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
 	$classes[] = 'last';
 }
 ?>
-<li <?php post_class( $classes ); ?>>
+<div <?php post_class( $classes ); ?>>
 
 	<?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
 
-	<a href="<?php the_permalink(); ?>">
+	<a href="<?php the_permalink(); ?>" class="book-cover">
 
 		<?php
 			/**
@@ -76,15 +77,4 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
 
 	</a>
 
-	<?php
-
-		/**
-		 * woocommerce_after_shop_loop_item hook
-		 *
-		 * @hooked woocommerce_template_loop_add_to_cart - 10
-		 */
-		do_action( 'woocommerce_after_shop_loop_item' );
-
-	?>
-
-</li>
+</div>

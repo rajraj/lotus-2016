@@ -14,6 +14,13 @@
   	exit; // Exit if accessed directly
   }
 
+  // // Change number or products per row
+  if (!function_exists('custom_shop_loop_columns')) {
+  	function custom_shop_loop_columns() {
+  		return 5;
+  	}
+  }
+
   /** Single Product ********************************************************/
 
   if ( ! function_exists( 'woocommerce_template_single_attributes' ) ) {
@@ -99,29 +106,33 @@
         woocommerce_wp_text_input(
           array(
             'id'    => '_number_of_pages',
-            'label'    => __( 'Pages', 'woocommerce' ),
+            'label'    => __( 'No of Pages', 'woocommerce' ),
             'placeholder'    => 'No of pages',
             'desc_tip'    => true,
             'description'    => __( 'Enter number of pages here.', 'woocommerce' ),
           )
         );
 
-        woocommerce_wp_text_input(
+        woocommerce_wp_select(
           array(
             'id'    => '_book_format',
-            'label'    => __( 'Format', 'woocommerce' ),
-            'placeholder'    => 'Format',
+            'label'    => __( 'Book Format', 'woocommerce' ),
             'desc_tip'    => true,
-            'description'    => __( 'Enter book format here.', 'woocommerce' ),
+            'description'    => __( 'Select Book Format.', 'woocommerce' ),
+            'options'=> array(
+              'paperback' => __( 'Paperback', 'woocommerce' ),
+              'hardcover' => __( 'Hardcover', 'woocommerce' ),
+              'ebook' => __( 'eBook', 'woocommerce' )
+            )
           )
         );
 
         woocommerce_wp_select(
           array(
             'id'    => '_print_type',
-            'label'    => __( 'Print', 'woocommerce' ),
+            'label'    => __( 'Print Type', 'woocommerce' ),
             'desc_tip'    => true,
-            'description'    => __( 'Enter Print Type.', 'woocommerce' ),
+            'description'    => __( 'Select Print Type.', 'woocommerce' ),
             'options'=> array(
               'colour' => __( 'Colour', 'woocommerce' ),
               'black' => __( 'Black & White', 'woocommerce' )
@@ -159,9 +170,9 @@
       if( !empty( $woocommerce_text_field_number_of_pages ) )
         update_post_meta( $post_id, '_number_of_pages', esc_attr( $woocommerce_text_field_number_of_pages ) );
 
-      $woocommerce_text_field_book_format = $_POST['_book_format'];
-      if( !empty( $woocommerce_text_field_book_format ) )
-        update_post_meta( $post_id, '_book_format', esc_attr( $woocommerce_text_field_book_format ) );
+      $woocommerce_select_field_book_format = $_POST['_book_format'];
+      if( !empty( $woocommerce_select_field_book_format ) )
+        update_post_meta( $post_id, '_book_format', esc_attr( $woocommerce_select_field_book_format ) );
     }
   }
 

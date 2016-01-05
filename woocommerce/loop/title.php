@@ -12,4 +12,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?>
-<h3><?php the_title(); ?></h3>
+<h3 class="book-title" title="<?php the_title(); ?>">
+	<?php
+		echo substr( get_the_title(), 0, 50 );
+		if ( strlen( get_the_title()) > 50 ) echo ' ...';
+	?>
+</h3>
