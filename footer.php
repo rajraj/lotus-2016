@@ -1,7 +1,7 @@
     </div> <!-- section div.container -->
   </section>
 
-  <footer id="footer">
+  <footer id="footer" class="hidden-xs">
 
     <div class="container">
       <div class="row">

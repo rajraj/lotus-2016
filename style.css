@@ -457,3 +457,15 @@ div.product .woocommerce-tabs ul.tabs li.active a {
   letter-spacing: 1px;
   margin-top: 5px;
 }
+
+.team-member-name {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.team-member-title {
+  margin-bottom: 20px;
+}
+.team-member-bio {
+  min-height: 230px;
+}
