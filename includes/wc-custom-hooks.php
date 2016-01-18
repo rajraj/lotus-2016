@@ -22,11 +22,11 @@
   add_action('woocommerce_after_main_content', 'my_theme_wrapper_end', 10);
 
   function my_theme_wrapper_start() {
-    echo '<section id="main">';
+    echo '';
   }
 
   function my_theme_wrapper_end() {
-    echo '</section>';
+    echo '';
   }
 
   add_action( 'after_setup_theme', 'woocommerce_support' );

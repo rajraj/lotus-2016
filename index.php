@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-  <section id="main">
 
     <div class="row">
 
@@ -40,8 +39,7 @@
         <?php if ( dynamic_sidebar( 'blog-sidebar' ) ); ?>
 
       </div>
-    </div>
 
-  </section>
+    </div>
 
 <?php get_footer(); ?>

@@ -56,38 +56,44 @@
 
   <div class="site-wrapper">
 
-      <div class="site-wrapper-inner">
+    <header>
 
-        <div class="container">
+      <div class="container">
 
-          <div class="row">
-            <nav id="nav-left" class="site-navigation">
-              <?php
-                $args = array(
-                  'menu' => 'header-menu-left',
-                  'theme_location' => 'header-menu-left',
-                  'container' => 'false',
-                  'menu_class' => 'menu-list'
-                );
-                wp_nav_menu( $args );
-              ?>
-            </nav>
+        <div class="row">
+          <nav id="nav-left" class="site-navigation">
+            <?php
+            $args = array(
+              'menu' => 'header-menu-left',
+              'theme_location' => 'header-menu-left',
+              'container' => 'false',
+              'menu_class' => 'menu-list'
+            );
+            wp_nav_menu( $args );
+            ?>
+          </nav>
 
-            <div id="site-logo">
-              <a href="<?php bloginfo( 'url' ); ?>">
-                <img src="<?php bloginfo('template_url'); ?>/img/lotus-logo.jpg" alt="<?php bloginfo('name'); ?>" />
-              </a>
-            </div>
-
-            <nav id="nav-right" class="site-navigation pull-right">
-              <?php
-                $args = array(
-                  'menu' => 'header-menu-right',
-                  'theme_location' => 'header-menu-right',
-                  'container' => 'false',
-                  'menu_class' => 'menu-list'
-                );
-                wp_nav_menu( $args );
-              ?>
-            </nav>
+          <div id="site-logo">
+            <a href="<?php bloginfo( 'url' ); ?>">
+              <img src="<?php bloginfo('template_url'); ?>/img/lotus-logo.jpg" alt="<?php bloginfo('name'); ?>" />
+            </a>
           </div>
+
+          <nav id="nav-right" class="site-navigation pull-right">
+            <?php
+            $args = array(
+              'menu' => 'header-menu-right',
+              'theme_location' => 'header-menu-right',
+              'container' => 'false',
+              'menu_class' => 'menu-list'
+            );
+            wp_nav_menu( $args );
+            ?>
+          </nav>
+        </div>
+
+      </div> <!-- header div.footer -->
+    </header>
+
+    <section id="main">
+      <div class="container">

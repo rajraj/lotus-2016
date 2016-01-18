@@ -9,9 +9,9 @@
 		<div class="col-md-5">
 
 			<div class="input-group">
-		    <input type="search" class="search-field form-control" placeholder="<?php echo esc_attr_x( 'Search Products&hellip;', 'placeholder', 'woocommerce' ); ?>" value="<?php echo get_search_query(); ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label', 'woocommerce' ); ?>" />
+		    <input type="search" class="search-field form-control" placeholder="<?php echo esc_attr_x( 'Search Books&hellip;', 'placeholder', 'woocommerce' ); ?>" value="<?php echo get_search_query(); ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label', 'woocommerce' ); ?>" />
 		    <span class="input-group-btn">
-					<input type="submit" class="btn btn-primary" value="<?php echo esc_attr_x( 'Search', 'submit button', 'woocommerce' ); ?>" />
+					<input type="submit" class="btn btn-grey" value="<?php echo esc_attr_x( 'Search', 'submit button', 'woocommerce' ); ?>" />
 		    </span>
 		  </div><!-- /input-group -->
 			<input type="hidden" name="post_type" value="product" />

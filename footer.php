@@ -1,11 +1,8 @@
+    </div> <!-- section div.container -->
+  </section>
 
-      </div> <!-- div.container -->
+  <footer id="footer">
 
-    </div> <!-- div.site-wrapper-inner -->
-
-  </div> <!-- div.site-wrapper -->
-
-  <div id="footer">
     <div class="container">
       <div class="row">
         <div class="col-md-3">
@@ -49,8 +46,11 @@
         </div>
       </div>
 
-    </div>
-  </div>
+    </div> <!-- footer div.container -->
+
+  </footer> <!-- div.footer -->
+
+</div> <!-- div.site-wrapper -->
 
 <?php wp_footer(); ?>
 
